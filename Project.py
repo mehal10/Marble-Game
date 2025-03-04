@@ -13,7 +13,7 @@ amt = start_amt
 result = 0
 
 #Number of rounds
-rounds = int(input("Enter The number of rounds you want to play: "))
+rounds = 3
 
 #last marble
 marble = 'none'
@@ -42,7 +42,7 @@ if amt < 0.5 * start_amt:
     
 
 #print results
-print(f'Amount: ${amt}, last result: ({marble}): {result}')
+print(f'Amount: {amt}, last result: ({marble}): {result}')
 print('')
 
 # print final results
