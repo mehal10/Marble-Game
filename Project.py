@@ -23,7 +23,7 @@ print(f'You start the game with {start_amt} gold pieces')
 
 #Loop drawing marbles
 for draw in range(1,rounds+1):
-    bet = input(f'Current Amount: {amt} Last draw:{marble} \nRound {draw} :- How much do you want to bet?: ')
+    bet = input(int(f'Current Amount: {amt} Last draw:{marble} \nRound {draw} :- How much do you want to bet?: '))
 
 #Draw marble
 marble = random.choice(bag)
