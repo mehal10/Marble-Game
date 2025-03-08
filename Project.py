@@ -4,7 +4,7 @@ import random
 bag = {'Green','Green','Green','Green','Green','Green','Red','Red','Red','Red',}
 
 #Starting amount of money
-start_amt = 1000
+start_amt = 0
 
 #Current amount
 amt = start_amt
