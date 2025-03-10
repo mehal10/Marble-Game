@@ -1,7 +1,7 @@
 import random
  
 #Bag with 10 marbles
-bag = ['Green','Green','Green','Green','Green','Green','Red','Red','Red','Red',]
+bag = ['white','white','white','white','white','white','Red','Red','Red','Red',]
 
 #Starting amount of money
 start_amt = 1000
@@ -22,6 +22,7 @@ marble = 'none'
 print(f'You start the game with {start_amt} gold pieces')
 
 #Draw marble
+random.shuffle(bag)
 marble = random.choice(bag)
 
 #Loop drawing marbles
