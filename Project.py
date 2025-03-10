@@ -1,7 +1,7 @@
 import random
  
 #Bag with 10 marbles
-bag = ['white','white','white','white','white','white','Red','Red','Red','Red',]
+bag = ['white','white','white','white','white','white','Black','Black','Black','Black',]
 
 #Starting amount of money
 start_amt = 1000
