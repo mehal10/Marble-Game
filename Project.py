@@ -30,7 +30,7 @@ for draw in range(1,rounds+1):
     bet = int(input(f'Current Amount: {amt} Last draw:{marble} \nRound {draw} :- How much do you want to bet?: '))
 
 # win or loss
-if marble == 'Green':
+if marble == 'White':
     result = +bet
 else:
     result = -bet
