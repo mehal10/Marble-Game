@@ -31,9 +31,9 @@ for draw in range(1,rounds+1):
 
 # win or loss
 if marble == 'White':
-    result = +bet
+    result = bet*2
 else:
-    result = -bet
+    result = bet-bet
 #calc win or loss/ result and new amount/purse
 amt+=result
 
