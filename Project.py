@@ -13,7 +13,7 @@ amt = start_amt
 result = 0
 
 #Number of rounds
-rounds = 3
+rounds = int(input("Enter Number Of Rounds: "))
 
 #last marble
 marble = 'none'
