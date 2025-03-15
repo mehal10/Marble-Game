@@ -37,14 +37,16 @@ else:
 #calc win or loss/ result and new amount/purse
 amt+=result
 
+#print results
+print(f'Amount: {amt}, last result: ({marble}): {result}')
+print('')
+
 #lose game if lose half of money
 if amt < 0.5 * start_amt:
     print(f'Game over! You lost too much gold!!!')
     
 
-#print results
-print(f'Amount: {amt}, last result: ({marble}): {result}')
-print('')
+
 
 # print final results
 print('starting/ ending amount: ', start_amt, '/',amt)
