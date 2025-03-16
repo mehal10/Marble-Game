@@ -1,53 +1,35 @@
 import random
- 
-#Bag with 10 marbles
-bag = ['White','White','White','White','White','White','Black','Black','Black','Black',]
 
-#Starting amount of money
-start_amt = 1000
-
-#Current amount
-amt = start_amt
-
-#Result of last round
-result = 0
-
-#Number of rounds
-rounds = int(input("Enter Number Of Rounds: "))
-
-#last marble
-marble = 'none'
-
-#Welcome user to game
-print(f'You start the game with {start_amt} gold pieces')
-
-#Draw marble
-random.shuffle(bag)
-marble = random.choice(bag)
-
-#Loop drawing marbles
-for draw in range(1,rounds+1):
-    bet = int(input(f'Current Amount: {amt} Last draw:{marble} \nRound {draw} :- How much do you want to bet?: '))
-
-# win or loss
-if marble == 'White':
-    result = bet*2
-else:
-    result = bet-bet
-#calc win or loss/ result and new amount/purse
-amt+=result
-
-#print results
-print(f'Amount: {amt}, last result: ({marble}): {result}')
-print('')
-
-#lose game if lose half of money
-if amt < 0.5 * start_amt:
-    print(f'Game over! You lost too much gold!!!')
+def marble_betting_game():
+    print("Welcome to the Marble Betting Game!")
+    money = int(input("Enter total money: "))  # Starting money
     
+    while money > 0:
+        print(f"You have ${money}.")
+        try:
+            bet = int(input("Enter your bet amount (or 0 to quit): "))
+            if bet == 0:
+                print("Thanks for playing!")
+                break
+            if bet > money:
+                print("You don't have enough money to place this bet!")
+                continue
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
+        
+        marbles = ['white'] * 5 + ['black'] * 5  # 5 white, 5 black
+        drawn_marble = random.choice(marbles)
+        print(f"You drew a {drawn_marble} marble!")
+        
+        if drawn_marble == 'white':
+            money += bet  # Double the bet amount
+            print(f"Congratulations! You doubled your bet. You now have ${money}.")
+        else:
+            money -= bet  # Lose the bet amount
+            print(f"Oh no! You lost your bet. You now have ${money}.")
+    
+    print("Game over. You're out of money!")
 
-
-
-# print final results
-print('starting/ ending amount: ', start_amt, '/',amt)
-print('gain/loss: ', ((amt-start_amt)/start_amt *100),'%')
+if __name__ == "__main__":
+    marble_betting_game()
