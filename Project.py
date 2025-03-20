@@ -18,7 +18,7 @@ def marble_betting_game():
             print("Invalid input. Please enter a number.")
             continue
         
-        marbles = ['white'] * 4 + ['black'] * 6  # 4 white, 6 black
+        marbles = ['white'] * 5 + ['black'] * 5  # 4 white, 6 black
         drawn_marble = random.choice(marbles)
         print(f"You drew a {drawn_marble} marble!")
         
