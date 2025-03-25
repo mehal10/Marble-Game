@@ -1,7 +1,7 @@
 import random
 
 def marble_betting_game():
-    print("Welcome to the Marble Betting Game!")
+    print("Welcome to the Marble Betting Game! There are 4 white marbles and 6 black marbles.")
     money = int(input("Enter total money: "))  # Starting money
     
     while money > 0:
